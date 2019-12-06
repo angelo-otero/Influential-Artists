@@ -1,0 +1,15 @@
+{
+  "name": "influentialartists",
+  "version": "1.0.0",
+  "description": "Single Page React App about influential artists through the ages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Angelo Otero",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

@@ -1,0 +1,9 @@
+.artist-card {
+    width: 250px;
+    text-align: center;
+}
+
+.artist-card img {
+    width: 95%;
+    height: auto;
+}

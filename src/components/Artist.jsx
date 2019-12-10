@@ -1,13 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Artist (props) {
+  const [isClicked, setIsClicked] = useState(false);
+  
+  function handleClick () {
+    !isClicked ? setIsClicked(true) : setIsClicked(false);
+    console.log("Artist clicked");
+  }
+
   return(
-    <div className="artist-card">
+    <div className="artist-card" onClick = {handleClick}>
       <img src={props.artistImg}/>
       <h3>{props.name}</h3>
-      <p>{props.years}</p>
+      {isClicked && (<div><p>{props.years}</p>
       <p>{props.artMovement}</p>
-      <p>{props.bio}</p>
+      <p>{props.bio}</p></div>)}
     </div>
   );
 }

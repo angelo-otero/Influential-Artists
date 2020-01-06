@@ -4,19 +4,16 @@ function Filter(props) {
 
     const [isClicked, setIsClicked] = useState(false);
 
-    function bla ()  {
-        console.log(isClicked);
-    };
-
     function handleCheckbox(event) {
         const filterName = event.target.name;
-        console.log(filterName);
         setIsClicked(true);
-        // !isClicked ? setIsClicked(true) : setIsClicked(false);
-        bla();
-        // if(isClicked) {
-        //     props.filterArtists();
-        // }
+        !isClicked ? setIsClicked(true) : setIsClicked(false);
+        props.filterArtists(filterName);
+    }
+
+    function handleSort (event) {
+        const sortValue = event.target.value;
+        props.sortArtists(sortValue);
     }
 
     return (
@@ -24,8 +21,8 @@ function Filter(props) {
             <div className="sort-by">
                 <h3>Sort by:</h3>
                 <select>
-                    <option>Chronological</option>
-                    <option>Alphabetical</option>
+                    <option onClick={handleSort} value="chronological">Chronological</option>
+                    <option onClick={handleSort} value="alphabetical">Alphabetical</option>
                 </select>
             </div>
             <div className="filter-by">

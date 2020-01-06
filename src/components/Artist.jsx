@@ -2,10 +2,9 @@ import React, {useState} from "react";
 
 function Artist (props) {
   const [isClicked, setIsClicked] = useState(false);
-  
+
   function handleClick () {
     !isClicked ? setIsClicked(true) : setIsClicked(false);
-    console.log("Artist clicked");
   }
 
   return(

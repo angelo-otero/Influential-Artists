@@ -6,25 +6,16 @@ function Filter(props) {
 
     function handleCheckbox(event) {
         const filterName = event.target.name;
-        setIsClicked(true);
         !isClicked ? setIsClicked(true) : setIsClicked(false);
-        props.filterArtists(filterName);
-    }
-
-    function handleSort (event) {
-        const sortValue = event.target.value;
-        props.sortArtists(sortValue);
+        
+        if (isClicked === true) {
+            props.filterArtists(filterName);
+        }
     }
 
     return (
         <form className="filter">
-            <div className="sort-by">
-                <h3>Sort by:</h3>
-                <select>
-                    <option onClick={handleSort} value="chronological">Chronological</option>
-                    <option onClick={handleSort} value="alphabetical">Alphabetical</option>
-                </select>
-            </div>
+            
             <div className="filter-by">
             <h3>Filter by Art Movement:</h3>
                 <div>

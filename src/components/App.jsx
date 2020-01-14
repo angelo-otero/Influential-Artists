@@ -45,26 +45,34 @@ function App() {
 
   return ( 
     <div>
-      <h1> Influential Artists Throughout the Ages < /h1> 
-      <Sort
-        sortArtists = {sortArtists}
-      />
-      <Filter 
-        filterArtists = {filterArtists} 
-      /> 
-      {artistsDisplay.map(Artists => {
-          return ( 
-            <Artist 
-              id = {Artists.id}
-              artistImg = {Artists.artistImg}
-              name = {Artists.name}
-              years = {Artists.years}
-              artMovement = {Artists.artMovement}
-              bio = {Artists.bio}
-            />
-          );
-        })
-      } 
+      <h1 className="title"> Influential Artists Throughout the Ages < /h1> 
+      <div className="main-content">
+
+        <div className="menu box-shadow">
+          <Sort
+            sortArtists = {sortArtists}
+          />
+          <Filter 
+            filterArtists = {filterArtists} 
+          />
+        </div>
+        <div className="artists-cards">
+          {artistsDisplay.map(Artists => {
+              return ( 
+                <Artist 
+                  id = {Artists.id}
+                  artistImg = {Artists.artistImg}
+                  name = {Artists.name}
+                  years = {Artists.years}
+                  artMovement = {Artists.artMovement}
+                  bio = {Artists.bio}
+                />
+              );
+            })
+          }
+        </div>
+        
+      </div>
     </div>
   );
 }

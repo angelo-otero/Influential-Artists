@@ -1,9 +1,92 @@
-.artist-card {
-    width: 250px;
+body {
+    font-family: "Open Sans";
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    font-family: "Merriweather";
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2rem;
     text-align: center;
 }
 
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: relative;
+}
+
+.menu {
+    width: 15%;
+    position: fixed;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.sort-by {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+
+.sort-by h3 {
+    margin: 0;
+}
+
+.filter {
+    padding: 15px;
+}
+
+.filter h3 {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.artists-cards {
+    position: relative;
+    left: 20%;
+    width: 80%;
+    display: grid;
+    grid-gap: 30px 5px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.box-shadow {
+    /* -webkit-box-shadow: -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         -1px 3px 10px 0px rgba(50, 50, 50, 0.5); */
+    box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+
+.artist-card {
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.artist-card:hover {
+    -webkit-box-shadow: -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    cursor: pointer;
+}
+
+.artist-image {
+    height: 300px;
+    width: 250px;
+    overflow: hidden;
+}
+
 .artist-card img {
-    height: 250px;
-    
+    max-width: 100%;
+    height: auto;
+}
+
+.artist-info {
+    padding: 10px;
 }

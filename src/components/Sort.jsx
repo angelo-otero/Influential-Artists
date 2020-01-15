@@ -13,8 +13,8 @@ function Sort (props) {
                 <h3>Sort by:</h3>
                 <select name="sort-options" onChange={handleSort}>
                     <option>---</option>
-                    <option value="chronological">Chronological</option>
-                    <option value="alphabetical">Alphabetical</option>
+                    <option value="chronological">Least Recent</option>
+                    <option value="alphabetical">A-Z</option>
                 </select>
             </div>
         </form>

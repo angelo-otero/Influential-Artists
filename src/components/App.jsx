@@ -1,10 +1,12 @@
 //jshint esversion: 6
 
 import React, {useState} from "react";
+import Header from "./Header";
 import Artist from "./Artist";
 import Artists from "../Artists";
 import Sort from "./Sort";
 import Filter from "./Filter";
+import Footer from "./Footer";
 
 function App() {
   const [artistsDisplay, setArtistsDisplay] = useState(Artists);
@@ -45,9 +47,9 @@ function App() {
 
   return ( 
     <div>
-      <h1 className="title"> Influential Artists Throughout the Ages < /h1> 
+      <Header/>
       <div className="main-content">
-
+        
         <div className="menu box-shadow">
           <Sort
             sortArtists = {sortArtists}
@@ -73,6 +75,7 @@ function App() {
         </div>
         
       </div>
+      <Footer/>
     </div>
   );
 }

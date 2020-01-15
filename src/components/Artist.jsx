@@ -14,10 +14,14 @@ function Artist (props) {
       </div>
       
       <div className="artist-info">
-        <h3>{props.name}</h3>
-        {isClicked && (<div><p>{props.years}</p>
-        <p>{props.artMovement}</p>
-        <p>{props.bio}</p></div>)}
+        <h3 className="artist-name">{props.name}</h3>
+        {isClicked && (
+          <div>
+            <p className="artist-year">{props.years}</p>
+            <p className="artist-movement">{props.artMovement}</p>
+            <p className="artist-bio">{props.bio}</p>
+          </div>
+        )}
       </div>
   
     </div>

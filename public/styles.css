@@ -33,7 +33,10 @@ header {
 .menu {
     background-color: #fff;
     width: 15%;
-    position: fixed;
+    height: 50vh;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     border: 2px solid #ccc;
     border-radius: 4px;
 }
@@ -61,7 +64,6 @@ header {
 
 .artists-cards {
     position: relative;
-    left: 20%;
     width: 80%;
     display: grid;
     grid-gap: 30px 5px;

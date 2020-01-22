@@ -8,10 +8,7 @@ function Filter(props) {
         const filterName = event.target.name;
         !isClicked ? setIsClicked(true) : setIsClicked(false);
         props.filterArtists(filterName);
-        // if (isClicked === true) {
-        //     props.filterArtists(filterName);
-        // }
-    }
+    }  
 
     return (
         <form className="filter">

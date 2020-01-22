@@ -48,31 +48,29 @@ function App() {
   return ( 
     <div>
       <Header/>
+      
       <div className="main-content">
         
         <div className="menu box-shadow">
-          <Sort
-            sortArtists = {sortArtists}
-          />
-          <Filter 
-            filterArtists = {filterArtists} 
-          />
+          <Sort sortArtists = {sortArtists}/>
+          <Filter filterArtists = {filterArtists}/>
         </div>
-        <div className="artists-cards">
-          {artistsDisplay.map(Artists => {
-              return ( 
-                <Artist 
-                  id = {Artists.id}
-                  artistImg = {Artists.artistImg}
-                  name = {Artists.name}
-                  years = {Artists.years}
-                  artMovement = {Artists.artMovement}
-                  bio = {Artists.bio}
-                />
-              );
-            })
-          }
-        </div>
+          
+          <div className="artists-cards">
+            {artistsDisplay.map(Artists => {
+                return ( 
+                  <Artist 
+                    id = {Artists.id}
+                    artistImg = {Artists.artistImg}
+                    name = {Artists.name}
+                    years = {Artists.years}
+                    artMovement = {Artists.artMovement}
+                    bio = {Artists.bio}
+                  />
+                );
+              })
+            }
+          </div>
         
       </div>
       <Footer/>

@@ -82,6 +82,7 @@ header {
     background-color: #fff;
     width: 350px;
     border-radius: 10px;
+    position: static;
 }
 
 .artist-card:hover {

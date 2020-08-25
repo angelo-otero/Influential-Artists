@@ -7,10 +7,11 @@ import Artists from "../Artists";
 import Sort from "./Sort";
 import Filter from "./Filter";
 import Footer from "./Footer";
+import artistArr from "../Clicked Artists";
 
 function App() {
   const [artistsDisplay, setArtistsDisplay] = useState(Artists);
-
+  
   function sortArtists(sortValue) {
 
     if (sortValue === "chronological") {
@@ -36,13 +37,16 @@ function App() {
   }
 
   function filterArtists(filterName) {
-
-    setArtistsDisplay(() => {
-      return Artists.filter((artist) => {
-        return artist.artMovement === filterName;
-      });
-    });
-    console.log("bleg");
+    artistArr.push(filterName);
+    console.log(artistArr);
+    console.log(Artists.findIndex(p => p.artMovement == filterName));
+    console.log(JSON.stringify(artistArr));
+     setArtistsDisplay(() => {
+         return Artists.filter((artist) => {
+           return artistArr.includes(artist.artMovement);
+         });
+       });
+    console.log(Artists);
   }
 
   return ( 

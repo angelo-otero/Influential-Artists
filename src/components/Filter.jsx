@@ -6,6 +6,7 @@ function Filter(props) {
 
     function handleCheckbox(event) {
         const filterName = event.target.name;
+
         !isClicked ? setIsClicked(true) : setIsClicked(false);
         props.filterArtists(filterName);
     }  

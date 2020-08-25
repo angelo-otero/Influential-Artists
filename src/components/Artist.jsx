@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+
+
 function Artist (props) {
   const [isClicked, setIsClicked] = useState(false);
 
@@ -8,7 +10,7 @@ function Artist (props) {
   }
 
   return(
-    <div className="artist-card" onClick = {handleClick}>
+    <div className="artist-card" onClick = {handleClick} style={{position: isClicked? "absolute" : "static"}}>
       <div className="artist-image">
         <img src={props.artistImg}/>
       </div>

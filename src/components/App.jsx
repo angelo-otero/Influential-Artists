@@ -37,16 +37,19 @@ function App() {
   }
 
   function filterArtists(filterName) {
-    artistArr.push(filterName);
+    const clickedIndex = artistArr.findIndex(p => p === filterName);
     console.log(artistArr);
-    console.log(Artists.findIndex(p => p.artMovement == filterName));
-    console.log(JSON.stringify(artistArr));
+    if (!artistArr.includes(filterName)) {
+      artistArr.push(filterName);
+     } else if (artistArr.includes(filterName)) {
+        artistArr.splice(clickedIndex, 1);
+     } 
      setArtistsDisplay(() => {
+     
          return Artists.filter((artist) => {
            return artistArr.includes(artist.artMovement);
          });
        });
-    console.log(Artists);
   }
 
   return ( 

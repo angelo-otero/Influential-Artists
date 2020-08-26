@@ -8,7 +8,7 @@ function Filter(props) {
         const filterName = event.target.name;
 
         !isClicked ? setIsClicked(true) : setIsClicked(false);
-        props.filterArtists(filterName);
+        props.filterArtists(filterName, isClicked);
     }  
 
     return (
@@ -18,43 +18,43 @@ function Filter(props) {
             <h3>Filter by Art Movement:</h3>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Renaissance"></input>
-                    <label for="Renaissance">Renaissance</label>
+                    <label htmlFor="Renaissance">Renaissance</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Baroque"></input>
-                    <label for="Baroque">Baroque</label>
+                    <label htmlFor="Baroque">Baroque</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Romanticism"></input>
-                    <label for="Romanticism">Romanticism</label>
+                    <label htmlFor="Romanticism">Romanticism</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Neo-Classicism"></input>
-                    <label for="Neo-Classicism">Neo-Classicism</label>
+                    <label htmlFor="Neo-Classicism">Neo-Classicism</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Hudson River School"></input>
-                    <label for="Hudson River School">Hudson River School</label>
+                    <label htmlFor="Hudson River School">Hudson River School</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Impressionism"></input>
-                    <label for="Impressionism">Impressionism</label>
+                    <label htmlFor="Impressionism">Impressionism</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Realism"></input>
-                    <label for="Realism">Realism</label>
+                    <label htmlFor="Realism">Realism</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Post-Impressionism"></input>
-                    <label for="Post-Impressionism">Post-Impressionism</label>
+                    <label htmlFor="Post-Impressionism">Post-Impressionism</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Golden Age of Illustration"></input>
-                    <label for="Golden Age of Illustration">Golden Age of Illustration</label>
+                    <label htmlFor="Golden Age of Illustration">Golden Age of Illustration</label>
                 </div>
                 <div>
                     <input onClick={handleCheckbox} type="checkbox" name="Early Modernism"></input>
-                    <label for="Early Modernism">Early Modernism</label>
+                    <label htmlFor="Early Modernism">Early Modernism</label>
                 </div>
             </div>
         </form>

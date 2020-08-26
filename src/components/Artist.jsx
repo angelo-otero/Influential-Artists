@@ -12,7 +12,7 @@ function Artist (props) {
   return(
     <div className="artist-card" onClick = {handleClick} style={{position: isClicked? "absolute" : "static"}}>
       <div className="artist-image">
-        <img src={props.artistImg}/>
+        <img src={props.artistImg} alt="artist profile"/>
       </div>
       
       <div className="artist-info">

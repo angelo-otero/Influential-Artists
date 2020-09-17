@@ -16,14 +16,14 @@ function App() {
 
     if (sortValue === "chronological") {
       setArtistsDisplay(() => {
-        return Artists.sort((a, b) => {
+        return artistsDisplay.sort((a, b) => {
           return (parseInt(a.years.substring(0, 4)) - parseInt(b.years.substring(0, 4)));
         });
       });
     }
     if (sortValue === "alphabetical") {
       setArtistsDisplay(() => {
-        return Artists.sort((a, b) => {
+        return artistsDisplay.sort((a, b) => {
           if (a.name < b.name) {
             return -1;
           }
@@ -38,18 +38,28 @@ function App() {
 
   function filterArtists(filterName) {
     const clickedIndex = artistArr.findIndex(p => p === filterName);
-    console.log(artistArr);
-    if (!artistArr.includes(filterName)) {
-      artistArr.push(filterName);
-     } else if (artistArr.includes(filterName)) {
-        artistArr.splice(clickedIndex, 1);
-     } 
+    console.log(artistArr + " " + artistArr.length);
+  
+    if (artistArr.length === Artists.length) {
+      artistArr.splice(0, Artists.length);
+    } 
      setArtistsDisplay(() => {
+      if (!artistArr.includes(filterName)) {
+        artistArr.push(filterName);
+       } else if (artistArr.includes(filterName)) {
+          if (filterName === artistArr[0]) {
+            for(let i = 0; i < Artists.length; i++){
+              artistArr.push(Artists[i].artMovement)
+            }
+          }
+        
+          artistArr.splice(clickedIndex, 1);
+       }
      
-         return Artists.filter((artist) => {
-           return artistArr.includes(artist.artMovement);
-         });
-       });
+       return Artists.filter((artist) => {
+        return artistArr.includes(artist.artMovement);
+      });   
+    });
   }
 
   return ( 
@@ -66,7 +76,7 @@ function App() {
           <div className="artists-cards">
             {artistsDisplay.map(Artists => {
                 return ( 
-                  <Artist 
+                  <Artist
                     id = {Artists.id}
                     artistImg = {Artists.artistImg}
                     name = {Artists.name}

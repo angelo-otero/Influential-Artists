@@ -81,7 +81,7 @@ header {
 .artist-card {
     background-color: #fff;
     width: 350px;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     position: static;
 }
 
@@ -100,7 +100,7 @@ header {
     overflow: hidden;
 }
 
-.artist-card img {
+.artist-card img, .displayed-artist img {
     max-width: 100%;
     height: auto;
 }
@@ -118,6 +118,30 @@ header {
 
 .artist-bio {
     font-weight: 300;
+}
+
+.displayed-artist {
+    background-color: #fff;
+    position: fixed;
+    z-index: 3;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    border-radius: 0 0 10px 10px;
+    left: 20%;
+}
+
+.displayed-info {
+    width: 75%;
+    margin-right: 10px;
+}
+
+.displayed-image {
+    height: 400px;
+    width: 350px;
+    overflow: hidden;
+    margin-right: 10px;
 }
 
 footer {

@@ -1,14 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 
 function Filter(props) {
-
-    const [isClicked, setIsClicked] = useState(false);
 
     function handleCheckbox(event) {
         const filterName = event.target.name;
 
-        !isClicked ? setIsClicked(true) : setIsClicked(false);
-        props.filterArtists(filterName, isClicked);
+        props.filterArtists(filterName);
     }  
 
     return (

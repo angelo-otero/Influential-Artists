@@ -144,6 +144,15 @@ header {
     margin-right: 10px;
 }
 
+.fa-window-close {
+    font-size: 2rem;
+    padding: 5px;
+}
+
+.fa-window-close:hover {
+    cursor: pointer;
+}
+
 footer {
     background-color: #c2b0c9;
     padding: 15px 10px;

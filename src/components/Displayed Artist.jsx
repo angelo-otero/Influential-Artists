@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 
 function DisplayedArtist (props) {
 
+    // const [isClicked, setIsClicked] = useState(false);
+    // const [display, setDisplay] = useState({display: {display: "none"}});
+
+    function handleClick() {
+        props.closeDisplay();
+    }
+
     return (
-        <div className="displayed-artist box-shadow" style={props.display}>
+        <div className="displayed-artist box-shadow" style={props.display} >
             <div className="displayed-image">
                 <img src={props.artistImg} alt="artist profile"/>
             </div>
@@ -15,7 +22,7 @@ function DisplayedArtist (props) {
                     <p className="artist-bio">{props.bio}</p>
                 </div>
              </div>
-             <i className="fas fa-window-close"></i>
+             <i className="far fa-window-close" onClick={handleClick}></i>
         </div>
     )
 }

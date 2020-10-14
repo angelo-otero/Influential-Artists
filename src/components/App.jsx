@@ -22,30 +22,6 @@ function App() {
     display: {display: "none"}
   });
   
-  // function sortArtists(sortValue) {
-
-  //   if (sortValue === "chronological") {
-  //     setArtistsDisplay(() => {
-  //       return Artists.sort((a, b) => {
-  //         return (parseInt(a.years.substring(0, 4)) - parseInt(b.years.substring(0, 4)));
-  //       });
-  //     });
-  //   }
-  //   if (sortValue === "alphabetical") {
-  //     setArtistsDisplay(() => {
-  //       return Artists.sort((a, b) => {
-  //         if (a.name < b.name) {
-  //           return -1;
-  //         }
-  //         if (a.name > b.name) {
-  //           return 1;
-  //         }
-  //         return 0;
-  //       });
-  //     });
-  //   }
-  // }
-  
   function filterArtists(filterName) {
     const clickedIndex = artistArr.findIndex(p => p === filterName);
   
@@ -115,7 +91,14 @@ function App() {
         display: {display: "flex"}
       });
     });
+  }
 
+  function closeDisplay () {
+    setDisplayedArtist(() =>{
+      return({
+        display: {display: "none"}
+      })
+    });
   }
 
   return ( 
@@ -131,6 +114,7 @@ function App() {
           bio = {displayedArtist.bio}
           display = {displayedArtist.display}
           handleClickedArtist = {handleClickedArtist}
+          closeDisplay = {closeDisplay}
         />
 
         <div className="menu box-shadow">

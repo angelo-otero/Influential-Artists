@@ -62,22 +62,23 @@ function App() {
         setIsArrEmpty(false);
         console.log(filterName);
        } else if (artistArr.includes(filterName)) { 
-          if (filterName === artistArr[0]) {
-            for(let i = 0; i < Artists.length; i++){
-              artistArr.push(Artists[i].artMovement)
-            }
-          }
           artistArr.splice(clickedIndex, 1);
           console.log(filterName);
        }
 
-       if (artistArr.length === 0 && filterName === "chronological") {
+       if (artistArr.length === 0) {
+        for(let i = 0; i < Artists.length; i++){
+          artistArr.push(Artists[i].artMovement)
+        }
+      }
+
+       if (filterName === "chronological") {
           console.log(filterName);
           return Artists.sort((a, b) => {
             return (parseInt(a.years.substring(0, 4)) - parseInt(b.years.substring(0, 4)));
         });
        }
-       if (artistArr.length === 0 && filterName === "alphabetical") {
+       if (filterName === "alphabetical") {
           console.log(filterName);
           return Artists.sort((a, b) => {
             if (a.name < b.name) {

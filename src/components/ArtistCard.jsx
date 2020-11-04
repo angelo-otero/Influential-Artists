@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-function Artist (props) {
+function ArtistCard (props) {
   
 
   function handleClick () {
@@ -23,4 +23,4 @@ function Artist (props) {
   );
 }
 
-export default Artist;
+export default ArtistCard;

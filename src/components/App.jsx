@@ -32,7 +32,8 @@ function App() {
     isVisible: false,
     fullImgSrc: "",
     fullImgTitle: "",
-    fullImgYear: ""
+    fullImgYear: "",
+    width: {width: ""}
     }
     
 
@@ -143,14 +144,15 @@ function App() {
     });
   }
 
-  function showFullScreen (fullImgSrc, fullImgTitle, fullImgYear) {
+  function showFullScreen (fullImgSrc, fullImgTitle, fullImgYear, width) {
     console.log(isFullScreen.display)
     setIsFullScreen({
         display: {display: "flex"}, 
         isVisible: true,
         fullImgSrc: fullImgSrc,
         fullImgTitle: fullImgTitle,
-        fullImgYear: fullImgYear
+        fullImgYear: fullImgYear,
+        width: {width: width}
       }
     );
 }
@@ -172,6 +174,7 @@ function closeFullScreen () {
                     showFullScreen = {showFullScreen}
                     closeFullScreen = {closeFullScreen}
                     display = {isFullScreen.display}
+                    width = {isFullScreen.width}
                 />  
             : false }
 

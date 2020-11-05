@@ -7,12 +7,12 @@ function FullImage (props) {
 
     return(
         <div className="full-image-container" style={props.display}>
-            <div className="full-image">
-                <img src={props.artWorkSrc} alt={props.artWorkTitles}/>  
+            <div className="full-image" style={props.width}>
+                <a href={props.artWorkSrc} target="_blank" rel="noopener noreferrer"><img src={props.artWorkSrc} alt={props.artWorkTitles}/></a>  
             </div>
             <div className="full-image-info">
-                <h1>{props.artWorkTitles}</h1>
-                <h2>{props.artWorkYears}</h2>
+                <h2>{props.artWorkTitles}</h2>
+                <h3>{props.artWorkYears}</h3>
             </div>
             <i className="far fa-window-close" onClick={handleClick}></i>
         </div>

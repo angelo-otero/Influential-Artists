@@ -10,6 +10,8 @@ function Gallery (props) {
                 i++;
                 return (
                 <ArtThumbnail
+                key = {i}
+                index = {i}
                 showFullScreen = {props.showFullScreen} 
                 artWorkSrc = {props.artWorkSrc[i]}
                 artWorkYears = {props.artWorkYears[i]}  

@@ -13,6 +13,7 @@ import FullImage from "./Full Image";
 
 function App() {
   const [artistsDisplay, setArtistsDisplay] = useState(Artists);
+  let [sortType, setSortType] = useState("alphabetical");
   let   [displayedArtist, setDisplayedArtist] = useState({
     artistImg: "",
     name: "",
@@ -35,9 +36,11 @@ function App() {
     fullImgYear: "",
     width: {width: ""}
     }
-    
-
   );
+
+  function sortArtists (sortName) {
+    setSortType(sortName);
+  }
 
   function filterArtists(filterName) {
     const clickedIndex = artistArr.findIndex(p => p === filterName);
@@ -51,7 +54,7 @@ function App() {
       // console.log(artistArr.length);
       // console.log(artistArr);
       console.log(filterName);
-
+      
       //adds art movement filter to artistsDisplay
       if (!artistArr.includes(filterName) && filterName !== "chronological" && filterName !== "alphabetical"  && filterName !== "") {
         artistArr.push(filterName);
@@ -67,30 +70,12 @@ function App() {
         }
       }
 
-     if (filterName === "chronological") {
-       console.log("Chrono Sort")
-        return Artists.sort((a, b) => {
-          return (parseInt(a.years.substring(0, 4)) - parseInt(b.years.substring(0, 4)));
-      });
-     }
-     if (filterName === "alphabetical") {
-       console.log("Alpha Sort")
-        return Artists.sort((a, b) => {
-          if (a.name < b.name) {
-            return -1;
-          }
-          if (a.name > b.name) {
-            return 1;
-          }
-          return 0;
-        });
-     }
-
-       if (filterName !== "chronological" || filterName !== "alphabetical") {
+       if (filterName !== "chronological" || filterName !== "alphabetical" || filterName !== "") {
         return Artists.filter((artist) => {
           return artistArr.includes(artist.artMovement);
         });   
        }
+       console.log(artistsDisplay);
        
     });
   }
@@ -164,6 +149,27 @@ function closeFullScreen () {
     );
 }
 
+// if (sortType === 'alphabetical') {
+//   return artistsDisplay.sort((a, b) => {
+//     return (
+//       (a.name > b.name ? 1: -1) 
+//     ) 
+//   });
+// }
+
+// if (sortType === 'chronological') {
+//   return artistsDisplay.sort((a, b) => {
+//     return (parseInt(a.years.substring(0, 4)) - parseInt(b.years.substring(0, 4)));
+//   });
+// }
+artistsDisplay.sort((a, b) => {
+    if (sortType === 'alphabetical') {
+      return ((a.name > b.name ? 1: -1) )
+    } else {
+      return (parseInt(a.years.substring(0, 4)) - parseInt(b.years.substring(0, 4)));
+    }
+    });
+
   return ( 
     <div>
     {isFullScreen.isVisible ? 
@@ -200,7 +206,7 @@ function closeFullScreen () {
         
 
         <div className="menu box-shadow">
-          <Sort filterArtists = {filterArtists}/>
+          <Sort sortArtists = {sortArtists}/>
           <Filter filterArtists = {filterArtists}/>
         </div>
           

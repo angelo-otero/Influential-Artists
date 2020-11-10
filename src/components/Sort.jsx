@@ -12,8 +12,8 @@ function Sort (props) {
             <div className="sort-by">
                 <h3>Sort by:</h3>
                 <select name="sort-options" onChange={handleSort}>
-                    <option value="alphabetical">A-Z</option>
                     <option value="chronological">Least Recent</option>
+                    <option value="alphabetical">A-Z</option>
                 </select>
             </div>
         </form>

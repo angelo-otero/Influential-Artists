@@ -13,7 +13,7 @@ import FullImage from "./Full Image";
 
 function App() {
   const [artistsDisplay, setArtistsDisplay] = useState(Artists);
-  let [sortType, setSortType] = useState("alphabetical");
+  let [sortType, setSortType] = useState("chronological");
   let   [displayedArtist, setDisplayedArtist] = useState({
     artistImg: "",
     name: "",
@@ -56,26 +56,23 @@ function App() {
       console.log(filterName);
       
       //adds art movement filter to artistsDisplay
-      if (!artistArr.includes(filterName) && filterName !== "chronological" && filterName !== "alphabetical"  && filterName !== "") {
+      if (!artistArr.includes(filterName)) {
         artistArr.push(filterName);
        } else if (artistArr.includes(filterName)) { 
           artistArr.splice(clickedIndex, 1);
        }
 
        //resets artistsDisplay to default state when all filters are removed
-       if (artistArr.length === 0 && filterName !== "chronological" && filterName !== "alphabetical"  && filterName !== "") {
+       if (artistArr.length === 0) {
          console.log("I'm emptying");
         for(let i = 0; i < Artists.length; i++){
           artistArr.push(Artists[i].artMovement)
         }
       }
-
-       if (filterName !== "chronological" || filterName !== "alphabetical" || filterName !== "") {
         return Artists.filter((artist) => {
           return artistArr.includes(artist.artMovement);
         });   
-       }
-       console.log(artistsDisplay);
+    
        
     });
   }

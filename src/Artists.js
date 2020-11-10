@@ -289,6 +289,325 @@ const Artists = [{
         year: "1892",
       }
     ]
+  },
+  {
+    id: "11",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/c/cb/Rose_O%27Neill_by_Gertrude_K%C3%A4sebier_crop.jpg",
+    name: "Rose O'Neill",
+    years: "1874-1944",
+    artMovement: "Golden Age of Illustration",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "12",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/0/05/Self-portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg",
+    name: "Artemisia Gentileschi",
+    years: "1593-1656",
+    artMovement: "Baroque",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "13",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Mary_Stevenson_Cassatt_-_Mary_Cassatt_Self-Portrait_-_Google_Art_Project.jpg",
+    name: "Mary Cassatt",
+    years: "1844-1926",
+    artMovement: "Impressionism",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "14",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/0/05/Frederic_Edwin_Church_-_Brady-Handy_%28cropped%29.jpg",
+    name: "Frederic Edwin Church",
+    years: "1826-1900",
+    artMovement: "Hudson River School",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "15",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/3/35/Self-portrait_in_a_Straw_Hat_by_Elisabeth-Louise_Vig%C3%A9e-Lebrun.jpg",
+    name: "Elisabeth Louise Vigée Le Brun",
+    years: "1755-1842",
+    artMovement: "Neo-Classicism",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "16",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/1/14/Eakins%2C_Henry_Ossawa_Tanner_1902.jpg",
+    name: "Henry Ossawa Tanner",
+    years: "1859-1937",
+    artMovement: "Realism",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "17",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/7/76/Georges_Seurat_1888.jpg",
+    name: "Georges Seurat",
+    years: "1859-1891",
+    artMovement: "Post-Impressionism",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "18",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/e/e9/F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg",
+    name: "Eugène Delacroix",
+    years: "1798-1863",
+    artMovement: "Romanticism",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "19",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/5/56/Self-portrait_at_the_Easel_Painting_a_Devotional_Panel_by_Sofonisba_Anguissola.jpg",
+    name: "Sofonisba Anguissola",
+    years: "1532-1625",
+    artMovement: "Renaissance",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "20",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Amrita_Sher-Gil_Self-portrait.jpg/654px-Amrita_Sher-Gil_Self-portrait.jpg",
+    name: "Amrita Sher-Gil",
+    years: "1913-1941",
+    artMovement: "Early Modernism",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
+  },
+  {
+    id: "21",
+    artistImg: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Self-portrait_by_N._C._Wyeth%2C_1940%2C_National_Academy_of_Design.JPG",
+    name: "Newell Convers Wyeth",
+    years: "1882-1945",
+    artMovement: "Golden Age of Illustration",
+    bio: "John Singer Sargent was an American painter who is considered as the leading portrait artist of his time. Sargent was well-traveled and worked on commissions from nobles, politicians and the wealthy from around the globe. In his spare time, he painted peoples and cultures he met and the landscapes he saw in his travels. He was an extremely productive artist, creating over 900 oil and 2000 watercolor paintings. Sargent was high in demand all through his life, though in his later years he preferred painting for himself.",
+    topWorks: [{
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Madame_X_%28Madame_Pierre_Gautreau%29%2C_John_Singer_Sargent%2C_1884_%28unfree_frame_crop%29.jpg",
+        title: "Madame X",
+        year: "1883-84",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/2/22/Theodore_Roosevelt_by_John_Singer_Sargent%2C_1903.jpg",
+        title: "Theodore Roosevelt",
+        year: "1903",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sargent_-_Muddy_Alligators.jpg",
+        title: "Muddy Alligators",
+        year: "1917",
+      },
+      {
+        workImg: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG/807px-Edinburgh_NGS_Singer_Sargent_Lady_Agnew.JPG",
+        title: "Portrait of Lady Agnew of Lochnaw",
+        year: "1892",
+      }
+    ]
   }
 ];
 

@@ -14,7 +14,7 @@ function DisplayedArtist (props) {
             <div className="displayed-artist-container box-shadow">
                 <div className="displayed-artist">
                     <div className="displayed-image">
-                        <img src={props.artistImg} alt="artist profile"/>
+                        <img src={props.artistImg} alt={props.name}/>
                     </div>
                     <div className="displayed-info">
                         <h3 className="artist-name">{props.name}</h3>

@@ -15,6 +15,11 @@ function ArtThumbnail (props) {
             width = "90%";
         }
 
+        if (window.screen.width < 700) {
+            console.log("Meh");
+            width= "90%";
+        }
+
         props.showFullScreen(props.artWorkSrc, props.artWorkTitles, props.artWorkYears, width)
     }
     

@@ -9,7 +9,7 @@ function SearchField (props) {
     return (
         <div className="searchInput box-shadow">
           <input type="text" onChange={handleSearch} placeholder="Search artists..."></input>
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
         </div>
     )
 }

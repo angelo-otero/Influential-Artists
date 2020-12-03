@@ -2,8 +2,6 @@ import React from "react";
 import Gallery from "./Gallery";
 
 function DisplayedArtist (props) {
-    // let topWorksIndex = Artists.findIndex(p => p.name === props.name);
-    
 
     function handleClick() {
         props.closeDisplay();

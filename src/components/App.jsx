@@ -35,13 +35,15 @@ function App() {
     fullImgSrc: "",
     fullImgTitle: "",
     fullImgYear: "",
-    width: {width: ""}
+    widthStyle: "",
+    heightStyle: ""
     }
   );
 
-  let [artistCardView, setArtistCardView] = useState(0);
+  let [artistCardView, setArtistCardView] = useState(6); 
 
-  let [isLessThanSix, setIsLessThanSix] = useState(false); 
+  let lessThanSixCards = false;
+  let isSixCards = true;
 
   function sortArtists (sortName) {
     setSortType(sortName);
@@ -51,6 +53,7 @@ function App() {
     for(let i = 0; i < Artists.length; i++){
       artistArr.push(Artists[i].artMovement)
     }
+    setArtistCardView(6);
   }
 
   function filterArtists(filterName) {
@@ -59,7 +62,7 @@ function App() {
     //empties artistArr when it is longer than Artists
     if (artistArr.length >= Artists.length) {
       artistArr.splice(0, artistArr.length);
-    } 
+    }
 
      setArtistsDisplay(() => {   
       //adds art movement filter to artistsDisplay
@@ -73,16 +76,11 @@ function App() {
       if (artistArr.length === 0) {
         emptyArr();
       }
-      
+
       return Artists.filter((artist) => {
         return artistArr.includes(artist.artMovement);
       });    
     });
-    if (artistsDisplay.length < 6) {
-      setIsLessThanSix(true);
-    } else {
-      setIsLessThanSix(false);
-    }
   }
 
   function handleClickedArtist (clickedArtist) {
@@ -115,7 +113,6 @@ function App() {
   }
 
   function closeDisplay () {
-    console.log(displayedArtist.topWorks);
     setDisplayedArtist(() =>{
       return({
         display: {display: "none"},
@@ -124,7 +121,7 @@ function App() {
     });
   }
 
-  function showFullScreen (fullImgSrc, fullImgTitle, fullImgYear, width) {
+  function showFullScreen (fullImgSrc, fullImgTitle, fullImgYear, widthStyle, heightStyle) {
     console.log(isFullScreen.display)
     setIsFullScreen({
         display: {display: "flex"}, 
@@ -132,7 +129,8 @@ function App() {
         fullImgSrc: fullImgSrc,
         fullImgTitle: fullImgTitle,
         fullImgYear: fullImgYear,
-        width: {width: width}
+        widthStyle: widthStyle,
+        heightStyle: heightStyle
       }
     );
   }
@@ -151,12 +149,24 @@ function App() {
     }
   }
 
-  function loadMoreArtists () {
-    setArtistCardView(artistCardView += 3);
+  function showMoreArtists () {
+    if (artistCardView < Artists.length) {
+      setArtistCardView(prevArtistCardView => prevArtistCardView + 3);
+    }
+    console.log('more');
+    console.log(artistCardView);
+  }
+
+  function showLessArtists () {
+    if (artistCardView > 6) {
+      setArtistCardView(prevArtistCardView => prevArtistCardView - 3);
+    }
+    console.log('less');
     console.log(artistCardView);
   }
 
   function updateSearch(searchInput) {
+    setArtistCardView(6);
     emptyArr();
     clearCheckbox();
     setArtistsDisplay(Artists.filter(artist=>{
@@ -172,18 +182,31 @@ function App() {
     }
   });
 
+  if (artistCardView < 6) {
+    lessThanSixCards = true;
+  } 
+  if (artistCardView > 6){
+    lessThanSixCards = false;
+  } 
+  if (artistCardView == 6) {
+    isSixCards = true;
+  } else {
+    isSixCards = false;
+  }
+
   return ( 
     <div>
       {isFullScreen.isVisible ? 
-                <FullImage 
-                    artWorkTitles = {isFullScreen.fullImgTitle} 
-                    artWorkSrc = {isFullScreen.fullImgSrc} 
-                    artWorkYears = {isFullScreen.fullImgYear} 
-                    showFullScreen = {showFullScreen}
-                    closeFullScreen = {closeFullScreen}
-                    display = {isFullScreen.display}
-                    width = {isFullScreen.width}
-                />  
+        <FullImage 
+            artWorkTitles = {isFullScreen.fullImgTitle} 
+            artWorkSrc = {isFullScreen.fullImgSrc} 
+            artWorkYears = {isFullScreen.fullImgYear} 
+            showFullScreen = {showFullScreen}
+            closeFullScreen = {closeFullScreen}
+            display = {isFullScreen.display}
+            widthStyle = {isFullScreen.widthStyle}
+            heightStyle = {isFullScreen.heightStyle}
+          />  
        : false }
 
       <Header/>
@@ -210,26 +233,30 @@ function App() {
         <div className="menu box-shadow">
           <SearchField updateSearch = {updateSearch}/>
           <Sort sortArtists = {sortArtists}/>
-          <Filter filterArtists = {filterArtists}/>
+          <Filter filterArtists = {filterArtists} emptyArr = {emptyArr}/>
         </div>
           
-          <div className="artists-cards">
-            {artistsDisplay.map(Artists => {
-                return ( 
-                  <ArtistCard
-                    key = {Artists.id}
-                    artistImg = {Artists.artistImg}
-                    name = {Artists.name}
-                    years = {Artists.years}
-                    handleClickedArtist = {handleClickedArtist}
-                  />
-                );
-              })
-            }
-            {/* {!isLessThanSix ? <button onClick={loadMoreArtists}>Load More</button> : null} */}
-          </div>
-        
+        <div className="artists-cards">
+          {artistsDisplay.slice(0, artistCardView).map(Artists => {
+              return ( 
+                <ArtistCard
+                  key = {Artists.id}
+                  artistImg = {Artists.artistImg}
+                  name = {Artists.name}
+                  years = {Artists.years}
+                  handleClickedArtist = {handleClickedArtist}
+                />
+              );
+            })
+          }
+        </div>
       </div>
+
+      <div className="showButtons">
+        {(!lessThanSixCards || isSixCards) ? <button onClick={showMoreArtists}>Show More...</button> : null}
+        {(!lessThanSixCards && !isSixCards) ? <button onClick={showLessArtists}>Show Less...</button> : null}
+      </div>
+      
       <Footer/>
     </div>
   );

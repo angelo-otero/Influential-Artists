@@ -7,8 +7,8 @@ function FullImage (props) {
 
     return(
         <div className="full-image-container" style={props.display}>
-            <div className="full-image" style={props.width}>
-                <a href={props.artWorkSrc} target="_blank" rel="noopener noreferrer"><img src={props.artWorkSrc} alt={props.artWorkTitles}/></a>  
+            <div className={`full-image ${props.widthStyle}`}>
+                <a href={props.artWorkSrc} target="_blank" rel="noopener noreferrer"><img className={props.heightStyle} src={props.artWorkSrc} alt={props.artWorkTitles}/></a>  
             </div>
             <div className="full-image-info">
                 <h2>{props.artWorkTitles}</h2>

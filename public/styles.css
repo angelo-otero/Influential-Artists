@@ -5,10 +5,16 @@ body {
     margin: 0;
     color: #312633;
     background-color: #f4efd3;
-    background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
+.box-shadow {
+    -webkit-box-shadow: -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 0 1px 2px 0px rgba(49,38,51,0.5);
+}
+
+/* header styles */
 header {
     text-align: center;
     margin-bottom: 25px;
@@ -31,9 +37,11 @@ header {
     min-height: 80vh;
 }
 
+
+/* search bar, sorting and filtering styles */
 .menu {
     background-color: #fff;
-    width: 17%;
+    width: 20%;
     height: 50vh;
     position: sticky;
     position: -webkit-sticky;
@@ -43,51 +51,104 @@ header {
 }
 
 .searchInput {
+    padding: 10px;
     background-color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .searchInput input {
-    padding: 10px 5px;
     font-size: 1rem;
-    width: 90%;
+    width: 70%;
     border: none;
 }
 
 .fa-search {
-    padding: 10px 5px;
     font-size: 1.25rem;
 }
 
+.sort {
+    display: flex;
+    align-items: center;
+}
+
 .sort-by {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid#ccc;
-    padding: 10px;
+    padding: 15px;
     background-color: #c2b0c9;
 }
 
 .sort-by h3 {
     margin: 0;
+    margin-right: 15px;
 }
 
 .filter {
-    padding: 15px;
+    padding: 15px; 
 }
 
-.filter h3 {
+.filter-height-toggle {
+    height: 300px;
+}
+
+.filter-arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: 0;
     margin-bottom: 15px;
 }
 
+.filter-arrow h3 {
+    margin: 0;
+    margin-right: 10px;
+}
+
+/* classes added or removed to filter
+options based on screen size */
+.visible {
+    display: 'flex';
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+    flex-direction: column;
+}
+
+.hover:hover {
+    cursor: pointer;
+    color: #c2b0c9;
+} 
+
+.rotated-down {
+    transform: rotate(180deg);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.rotated-up {
+    transform: rotate(0deg);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* artist cards styles */
 .artists-cards {
     position: relative;
     width: 80%;
     display: grid;
     grid-gap: 30px 5px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     justify-items: center;
 }
 
@@ -99,7 +160,7 @@ header {
     position: static;
 }
 
-.artist-card:hover, .img-thumbnail:hover {
+.artist-card:hover, .img-thumbnail:hover, button:hover {
     -webkit-box-shadow: -1px 3px 10px 0px rgba(49, 38, 51, 0.5);
     -moz-box-shadow:    -1px 3px 10px 0px rgba(49, 38, 51, 0.5);
     box-shadow:         -1px 3px 10px 0px rgba(49, 38, 51, 0.5);
@@ -135,13 +196,21 @@ header {
     font-weight: 300;
 }
 
-.box-shadow {
-    -webkit-box-shadow: -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
-    -moz-box-shadow:    -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
-    box-shadow:         -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
-    box-shadow: 0 1px 2px 0px rgba(49,38,51,0.5);
+.showButtons {
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
 }
 
+.showButtons button {
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+/* pop up display of clicked artist styles */
 .displayed-artist-container {
     background-color: #fff;
     position: fixed;
@@ -196,6 +265,7 @@ header {
 }
 
 .fa-window-close {
+    color: rgba(255, 0, 43, 0.89);
     font-size: 2rem;
     padding: 5px;
     top: 1%;
@@ -208,6 +278,8 @@ header {
     color: #9656a1;
 }
 
+
+/* clicked artwork image displayed full screen styles */
 .full-image-container {
     background-color: #312633;
     color: #f4efd3;
@@ -223,16 +295,15 @@ header {
     margin: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .full-image a {
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .full-image img { 
     width: 100%;
-    height: 90vh; 
     object-fit: cover;
     object-position: top;
 }
@@ -251,9 +322,54 @@ header {
     margin-top: 0;
 }
 
-footer {
+/* adds proper width/height to keep original image ratio */
+.full-image-portrait {
+    width: "45%";
+}
+
+.full-image-landscape {
+    width: 90%;
+}
+
+.portrait-height {
+    height: 90vh;
+}
+
+.landscape-height {
+    height: 50vh;
+}
+
+/* footer styles */
+.learn-more {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
     background-color: #c2b0c9;
-    padding: 15px 10px;
+    padding: 15px 25px;
+}
+
+.learn-more h3 {
+    margin: 0px;
+}
+
+.learn-more p {
+    margin-bottom: 0px;
+}
+
+.learn-more ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.learn-more a {
+    color: #f4efd3; 
+    text-decoration: none;
+}
+
+.learn-more a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* responsive behavior */
@@ -319,31 +435,27 @@ footer {
         width: 20%;
         height: 55vh;
     }
+
+    .searchInput input {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
-
     .main-content {
         flex-direction: column;
         align-items: center;
+        min-height: 55vh;
     }
 
     .menu {
         width: 100%;
         z-index: 2;
-        height: 47px;
+        height: 52px;
         left: 0;
         display: flex;
         justify-content: space-between;
         background-color: #c2b0c9;
-    }
-
-    .searchInput input, .fa-search {
-        padding: 2px;
-    }
-
-    .searchInput {
-        width: 30%;
     }
 
     .sort-by {
@@ -353,6 +465,11 @@ footer {
 
     .filter, .filter-by {
         background-color: #fff;
+    }
+
+    .filter {
+        display: flex;
+        justify-content: center;
     }
 
     .artists-cards {
@@ -381,9 +498,17 @@ footer {
         margin-bottom: 50px;
     }
 
+    .showButtons {
+        width: 65%;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
+    .menu {
+        height: 70px;
+    }
+
     .displayed-artist-container {
         width: 90%;
         left: 2.5%;
@@ -409,6 +534,27 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        height: 110px;
+    }
+
+    .searchInput input {
+        width: 90%;
+    }
+
+    .sort-by, .filter {
+        padding: 5px;
+    }
+
+    .filter-by h3 {
+        padding-bottom: 0;
+    }
+
+    .sort-by {
+        justify-content: center;
+    }
+
     .artists-cards {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }

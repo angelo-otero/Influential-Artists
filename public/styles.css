@@ -324,11 +324,12 @@ options based on screen size */
 
 /* adds proper width/height to keep original image ratio */
 .full-image-portrait {
-    width: "45%";
+    width: 45%;
 }
 
 .full-image-landscape {
     width: 90%;
+    object-position: center;
 }
 
 .portrait-height {
@@ -502,6 +503,10 @@ options based on screen size */
         width: 65%;
     }
 
+    .full-image-landscape, .full-image-portrait {
+        width: 90%;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -531,6 +536,7 @@ options based on screen size */
         height: 425px;
         width: 450px;
     }
+
 }
 
 @media screen and (max-width: 600px) {

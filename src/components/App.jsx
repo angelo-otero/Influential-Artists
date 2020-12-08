@@ -59,6 +59,8 @@ function App() {
   function filterArtists(filterName) {
     const clickedIndex = artistArr.findIndex(p => p === filterName);
 
+    console.log(lessThanSixCards);
+
     //empties artistArr when it is longer than Artists
     if (artistArr.length >= Artists.length) {
       artistArr.splice(0, artistArr.length);
@@ -150,7 +152,7 @@ function App() {
   }
 
   function showMoreArtists () {
-    if (artistCardView < Artists.length) {
+    if (artistCardView < Artists.length && artistCardView < artistsDisplay.length) {
       setArtistCardView(prevArtistCardView => prevArtistCardView + 3);
     }
     console.log('more');
@@ -182,13 +184,13 @@ function App() {
     }
   });
 
-  if (artistCardView < 6) {
+  if (artistCardView < 6 || artistsDisplay.length < 6) {
     lessThanSixCards = true;
   } 
   if (artistCardView > 6){
     lessThanSixCards = false;
   } 
-  if (artistCardView == 6) {
+  if (artistCardView === 6) {
     isSixCards = true;
   } else {
     isSixCards = false;

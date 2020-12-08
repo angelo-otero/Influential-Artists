@@ -3,7 +3,7 @@ import {useMediaQuery} from "react-responsive";
 
 function ArtThumbnail (props) {
    
-    const isSmallScreen = useMediaQuery({query: "(max-width:800px"}) 
+    const isSmallScreen = useMediaQuery({query: "(max-width:800px"}); 
 
     function handleClick() {
         //sets portrait or landscape orientation 

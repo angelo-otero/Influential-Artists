@@ -1,6 +1,7 @@
 import React from "react";
 
 function FullImage (props) {
+
     function handleClick () {
         props.closeFullScreen();
     }

@@ -1,11 +1,14 @@
 {
+  "homepage": "https://angelo-otero.github.io/Influential-Artists",
   "name": "influentialartists",
   "version": "1.0.0",
   "description": "Single Page React App about influential artists through the ages.",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Angelo Otero",
   "license": "ISC",
@@ -28,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }

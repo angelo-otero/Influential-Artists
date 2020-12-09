@@ -1,0 +1,582 @@
+body {
+    font-family: "Open Sans";
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: #312633;
+    background-color: #f4efd3;
+}
+
+.box-shadow {
+    -webkit-box-shadow: -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow:         -1px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 0 1px 2px 0px rgba(49,38,51,0.5);
+}
+
+/* header styles */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    background-color: #c2b0c9;
+    padding: 25px 15px;
+    padding-top: 60px;
+}
+
+.title {
+    font-family: "Gravitas One";
+    font-size: 2.75rem;
+    margin: 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: relative;
+    min-height: 80vh;
+}
+
+
+/* search bar, sorting and filtering styles */
+.menu {
+    background-color: #fff;
+    width: 20%;
+    height: 50vh;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.searchInput {
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchInput input {
+    font-size: 1rem;
+    width: 70%;
+    border: none;
+}
+
+.fa-search {
+    font-size: 1.25rem;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+}
+
+.sort-by {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid#ccc;
+    padding: 15px;
+    background-color: #c2b0c9;
+}
+
+.sort-by h3 {
+    margin: 0;
+    margin-right: 15px;
+}
+
+.filter {
+    padding: 15px; 
+}
+
+.filter-height-toggle {
+    height: 300px;
+}
+
+.filter-arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.filter-arrow h3 {
+    margin: 0;
+    margin-right: 10px;
+}
+
+/* classes added or removed to filter
+options based on screen size */
+.visible {
+    display: 'flex';
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+    flex-direction: column;
+}
+
+.hover:hover {
+    cursor: pointer;
+    color: #c2b0c9;
+} 
+
+.rotated-down {
+    transform: rotate(180deg);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.rotated-up {
+    transform: rotate(0deg);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* artist cards styles */
+.artists-cards {
+    position: relative;
+    width: 80%;
+    display: grid;
+    grid-gap: 30px 5px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin-bottom: 25px;
+    justify-items: center;
+}
+
+.artist-card {
+    background-color: #fff;
+    width: 350px;
+    height: 500px;
+    border-radius: 0 0 10px 10px;
+    position: static;
+}
+
+.artist-card:hover, .img-thumbnail:hover, button:hover {
+    -webkit-box-shadow: -1px 3px 10px 0px rgba(49, 38, 51, 0.5);
+    -moz-box-shadow:    -1px 3px 10px 0px rgba(49, 38, 51, 0.5);
+    box-shadow:         -1px 3px 10px 0px rgba(49, 38, 51, 0.5);
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+
+.artist-image {
+    height: 400px;
+    width: 350px;
+    overflow: hidden;
+}
+
+.artist-card img, .displayed-artist img, .img-thumbnail {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.artist-info {
+    padding: 10px;
+}
+
+.artist-name {
+    font-family: "Merriweather";
+    font-weight: 900;
+    font-style: italic;
+    color: #9656a1;
+}
+
+.artist-bio {
+    font-weight: 300;
+}
+
+.showButtons {
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.showButtons button {
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+/* pop up display of clicked artist styles */
+.displayed-artist-container {
+    background-color: #fff;
+    position: fixed;
+    z-index: 4;
+    width: 65%;
+    padding: 15px;
+    height: 550px;
+    border-radius: 0 0 10px 10px;
+    top: 16%;
+    left: 18%;
+}
+
+.displayed-artist-background {
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.displayed-artist {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.displayed-info {
+    width: 75%;
+}
+
+.displayed-image {
+    display: flex;
+    justify-content: flex-start;
+    height: 300px;
+    width: 250px;
+    overflow:  hidden;
+    margin-right: 15px;
+}
+
+.artwork-thumbnails {
+    display: grid;
+    grid-gap: 10px 5px;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    justify-items: center;
+}
+
+.img-thumbnail {
+    height: 225px;
+    width: 225px;
+}
+
+.fa-window-close {
+    color: rgba(255, 0, 43, 0.89);
+    font-size: 2rem;
+    padding: 5px;
+    top: 1%;
+    position: absolute;
+    left: 95.6%;
+}
+
+.fa-window-close:hover {
+    cursor: pointer;
+    color: #9656a1;
+}
+
+
+/* clicked artwork image displayed full screen styles */
+.full-image-container {
+    background-color: #312633;
+    color: #f4efd3;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 5;
+    flex-direction: column;
+}
+
+.full-image {
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-image a {
+    width: 100%;   
+}
+
+.full-image img { 
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.full-image-info {
+    text-align: center;
+}
+
+.full-image-info h2 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-family: "Merriweather";
+}
+
+.full-image-info h3 {
+    margin-top: 0;
+}
+
+/* adds proper width/height to keep original image ratio */
+.full-image-portrait {
+    width: 45%;
+}
+
+.full-image-landscape {
+    width: 90%;
+    object-position: center;
+}
+
+.portrait-height {
+    height: 90vh;
+}
+
+.landscape-height {
+    height: 50vh;
+}
+
+/* footer styles */
+.learn-more {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    background-color: #c2b0c9;
+    padding: 15px 25px;
+}
+
+.learn-more h3 {
+    margin: 0px;
+}
+
+.learn-more p {
+    margin-bottom: 0px;
+}
+
+.learn-more ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.learn-more a {
+    color: #f4efd3; 
+    text-decoration: none;
+}
+
+.learn-more a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* responsive behavior */
+@media screen and (max-width: 1406px) {
+    .displayed-artist-container {
+        height: 475px;
+        top: 18%;
+    }
+
+    .displayed-image {
+        height: 200px;
+        width: 150px;
+    }
+    
+    .displayed-info {
+        width: 85%;
+    }
+
+    .artist-name, .artist-year, .artist-movement, .artist-bio {
+        margin-bottom: 5px;
+        margin-top: 0;
+    } 
+
+    .artwork-thumbnails {
+        display: grid;
+        grid-gap: 10px 5px;
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    }
+    
+    .img-thumbnail {
+        height: 175px;
+        width: 175px;
+    }
+
+    .fa-window-close {
+        left: 93%;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .displayed-artist-container {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .artists-cards {
+        grid-gap: 20px 5px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .artist-card {
+        width: 250px;
+        height: 375px;
+    }
+
+    .artist-image {
+        height: 275px;
+        width: 250px;
+    }
+
+    .menu {
+        width: 20%;
+        height: 55vh;
+    }
+
+    .searchInput input {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        min-height: 55vh;
+    }
+
+    .menu {
+        width: 100%;
+        z-index: 2;
+        height: 52px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: #c2b0c9;
+    }
+
+    .sort-by {
+        border-bottom: none;
+        font-size: .85rem;
+    }
+
+    .filter, .filter-by {
+        background-color: #fff;
+    }
+
+    .filter {
+        display: flex;
+        justify-content: center;
+    }
+
+    .artists-cards {
+        margin-top: 25px;
+        width: 90%;
+    }
+
+    .displayed-artist {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .displayed-image {
+        margin: auto;
+        margin-bottom: 5px;
+    }
+
+    .displayed-info {
+        width: 100%;
+    }
+
+    .artwork-thumbnails {
+        margin: auto;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .showButtons {
+        width: 65%;
+    }
+
+    .full-image-landscape, .full-image-portrait {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .menu {
+        height: 70px;
+    }
+
+    .displayed-artist-container {
+        width: 90%;
+        left: 2.5%;
+    }
+
+    .fa-window-close {
+        left: 90%;
+    }
+
+    .artists-cards {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+    
+    .artist-card {
+        width: 450px;
+        height: 475px;
+    }
+
+    .artist-image {
+        height: 425px;
+        width: 450px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        height: 110px;
+    }
+
+    .searchInput input {
+        width: 90%;
+    }
+
+    .sort-by, .filter {
+        padding: 5px;
+    }
+
+    .filter-by h3 {
+        padding-bottom: 0;
+    }
+
+    .sort-by {
+        justify-content: center;
+    }
+
+    .artists-cards {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .artist-card {
+        width: 350px;
+        height: 425px;
+    }
+
+    .artist-image {
+        height: 375px;
+        width: 350px;
+    }
+
+    header {
+        font-size: .85rem;
+    }
+}
+

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/Influential-Artists/static/js/main.a0aa860c.chunk.js",
+    "main.js.map": "/Influential-Artists/static/js/main.a0aa860c.chunk.js.map",
+    "runtime-main.js": "/Influential-Artists/static/js/runtime-main.de2ae3f4.js",
+    "runtime-main.js.map": "/Influential-Artists/static/js/runtime-main.de2ae3f4.js.map",
+    "static/js/2.c7ee8f91.chunk.js": "/Influential-Artists/static/js/2.c7ee8f91.chunk.js",
+    "static/js/2.c7ee8f91.chunk.js.map": "/Influential-Artists/static/js/2.c7ee8f91.chunk.js.map",
+    "index.html": "/Influential-Artists/index.html",
+    "static/js/2.c7ee8f91.chunk.js.LICENSE.txt": "/Influential-Artists/static/js/2.c7ee8f91.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de2ae3f4.js",
+    "static/js/2.c7ee8f91.chunk.js",
+    "static/js/main.a0aa860c.chunk.js"
+  ]
+}

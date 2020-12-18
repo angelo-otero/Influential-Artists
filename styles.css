@@ -149,7 +149,7 @@ options based on screen size */
     grid-gap: 30px 5px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     margin-bottom: 25px;
-    justify-content: center;
+    justify-items: center;
 }
 
 .artist-card {
